@@ -7,6 +7,6 @@ Windows: C:\Users"yourUserName"\AppData\Roaming\Sublime Text 3\Packages\User
 
 Copy the .sublime-syntax file
 
-Package is also available [here](https://packagecontrol.io).
+<!--Package is also available [here](https://packagecontrol.io).-->
 
 -->[Sublime Text 3](http://www.sublimetext.com/3)<--
