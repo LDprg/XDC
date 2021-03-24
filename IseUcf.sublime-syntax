@@ -33,51 +33,51 @@ contexts:
 
   operators:
     - match: '(?i)\b(LOC|IOSTANDARD|PERIOD)\b'
-      scope: variable.function.z80
+      scope: variable.function.ucf
     - match: '\s(!=|##|&&|<<|<=|>>|>=|\||\|\||[&$%*+/=?~><|!-]|=)\s'
-      scope: keyword.control.z80
+      scope: keyword.control.ucf
 
   numbers:
     - match: '.{{decimal}}'
-      scope: constant.numeric.integer.z80
+      scope: constant.numeric.integer.ucf
 
   strings:
     - match: '"'
       comment: 'Strings begin/end with double quotes'
-      scope: punctuation.definition.string.begin.z80
+      scope: punctuation.definition.string.begin.ucf
       push: inside_string
   inside_string:
     - meta_include_prototype: false
-    - meta_scope: string.quoted.double.z80
+    - meta_scope: string.quoted.double.ucf
     - match: '\\.'
-      scope: constant.character.escape.z80
+      scope: constant.character.escape.ucf
     - match: '"'
-      scope: punctuation.definition.string.end.z80
+      scope: punctuation.definition.string.end.ucf
       pop: true
 
   labels:
     - match: '^({{label}}):?'
       comment: 'Label definition'
       captures:
-        1: entity.name.function.z80
+        1: entity.name.function.ucf
     - match: '^ +({{label}}):'
       comment: 'Indented label definition'
       captures:
-        1: entity.name.function.z80
+        1: entity.name.function.ucf
     - match: '\({{label_multi}}\)'
       comment: 'Address of label'
-      scope: variable.parameter.z80
+      scope: variable.parameter.ucf
     - match: ', ?({{label_multi}})\b'
       comment: 'Labels used in instructions'
       captures:
-        1: variable.function.z80
+        1: variable.function.ucf
 
   comments:
     - match: '#'
       comment: 'Comments begin with a "#" and finish at EOL'
-      scope: punctuation.definition.comment.z80
+      scope: punctuation.definition.comment.ucf
       push:
         # This is an anonymous context push for brevity.
-        - meta_scope: comment.line.z80
+        - meta_scope: comment.line.ucf
         - match: $\n?
           pop: true
