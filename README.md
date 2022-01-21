@@ -1,5 +1,5 @@
-# UCFHighlighter
-A Sublime Text 3 Package for Highlighting ISE UCF files for VHDL
+# XDCHighlighter
+A Sublime Text 3/4 Package for Highlighting VIVADO XDC files for VHDL
 
 Save the file to your Packages\User folder.
 
