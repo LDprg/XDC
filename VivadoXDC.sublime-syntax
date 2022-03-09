@@ -39,7 +39,7 @@ contexts:
       scope: keyword.control.xdc
 
   numbers:
-    - match: '([A-Z|a-z])?{{number}}'
+    - match: '([A-Z|a-z]*)?{{number}}'
       scope: constant.numeric.integer.xdc
 
   strings:
